@@ -1,0 +1,199 @@
+﻿Task Name,Duration,Start,Finish,Predecessors,VPBank members,Resource Names
+Preparation stage,30 days,Fri 1/19/24,Fri 3/1/24,,,
+   Test/dev and reference environment setup,25 days,Fri 1/19/24,Fri 2/23/24,,Dongdv4/Ductm6,VPB
+      Equipment installation,16 days,Fri 1/19/24,Mon 2/12/24,,Quynt,HPT
+      Database masking,5 days,Tue 2/13/24,Mon 2/19/24,3,Ductm6,
+      Migrate database to reference environment,2 days,Tue 2/20/24,Wed 2/21/24,4,Quynt,HPT
+      Verify and handover,2 days,Thu 2/22/24,Fri 2/23/24,5,Ductm6,
+   VPN provide,5 days,Tue 2/13/24,Mon 2/19/24,3,Dongdv4,
+   Resource allocation,9 days,Tue 2/20/24,Fri 3/1/24,,,
+      Redhat resource,9 days,Tue 2/20/24,Fri 3/1/24,4,,Vidya
+Kick off project,1 day?,Mon 2/19/24,Mon 2/19/24,,,
+Site survey,8 days,Tue 2/20/24,Thu 2/29/24,10,,"Redhat,FIS"
+Infrastructure Arrangments & Environment Planning,303 days,Thu 2/22/24,Wed 5/7/25,,,
+   Reference Environment R19,295 days,Thu 2/22/24,Fri 4/25/25,5,Ductm6,VPB
+   Dev environment provided,2 days,Thu 2/22/24,Fri 2/23/24,5,Ductm6,VPB
+      Upload R23 package,1 day,Thu 2/22/24,Thu 2/22/24,5,Ductm6,
+      R23 installation,1 day,Fri 2/23/24,Fri 2/23/24,15,Farsan,
+"   Application Conversion and Mock, COB (full data environment)",290 days,Tue 3/12/24,Wed 5/7/25,5,Ductm6,VPB
+   Code Retrofit & Sanity,139 days,Tue 3/12/24,Fri 9/27/24,5,Ductm6,VPB
+   SIT,52 days,Mon 9/30/24,Tue 12/10/24,18,Ductm6,VPB
+   UAT,65 days,Wed 12/11/24,Thu 3/20/25,19,Ductm6,VPB
+   Hardware P Series Standalone Servers (Dev Environment),295 days,Thu 2/22/24,Fri 4/25/25,13SS,Ductm6,VPB
+Design stage,50 days,Mon 3/4/24,Wed 5/15/24,,,
+   Design Workshop and documentation,30 days,Mon 3/4/24,Fri 4/12/24,"11,9",Hoangpn6/Manbd/HoanhAnh,"Redhat,FIS"
+   Test plan/Test stratergy,20 days,Mon 4/15/24,Wed 5/15/24,23,ThuBTP,"FIS,System,VPB"
+Hardware procurement,123 days,Mon 4/8/24,Wed 10/2/24,,,
+   Procurement timeline,32 days,Mon 4/8/24,Fri 5/24/24,23FS-5 days,ThaiVu/Dongdv4,VPB
+   Loading Hardware,66 days,Mon 5/27/24,Mon 8/26/24,26,ThaiVu/Dongdv4,VPB
+   Hardware installation,25 days,Tue 8/27/24,Wed 10/2/24,27,Duongnh7,VPB
+OCP implementation - Redhat,209 days,Mon 4/15/24,Mon 2/17/25,,,
+   Implementation - OCP & ODF for DEV/TEST,25 days,Mon 4/15/24,Wed 5/22/24,,,
+      OCP Installation & Configuration (Dev/Test),10 days,Mon 4/15/24,Mon 4/29/24,23,Longnn7/Namth22/Manbd,"Redhat,FIS"
+      ODF Installation & Configuration (Dev/Test),5 days,Thu 5/2/24,Wed 5/8/24,31,Longnn7/Namth22/Manbd,"Redhat,FIS"
+      UAT for Dev/Test - OCP & ODF,5 days,Thu 5/9/24,Wed 5/15/24,32,Longnn7/Namth22/Manbd,"Redhat,FIS"
+      CER & KT for Dev/Test - OCP & ODF,5 days,Thu 5/16/24,Wed 5/22/24,33,Longnn7/Namth22/Manbd,"Redhat,FIS"
+   Training 1 - basic,8 days,Thu 5/23/24,Mon 6/3/24,34,Dongdv4,Redhat
+   Training 2- advance,10 days,Mon 8/12/24,Fri 8/23/24,,Dongdv4,Redhat
+   Implementation - OCP & ODF for PROD,23 days,Thu 10/3/24,Mon 11/4/24,,,
+      OCP Installation & Configuration (Prod - Primary DC),10 days,Thu 10/3/24,Wed 10/16/24,28,Longnn7/Namth22/Manbd,"FIS1,Redhat1"
+      ODF Installation & Configuration (Prod - Primary DC),3 days,Thu 10/17/24,Mon 10/21/24,38,Longnn7/Namth22/Manbd,"FIS1,Redhat1"
+      UAT for PROD - OCP & ODF,5 days,Tue 10/22/24,Mon 10/28/24,39,Longnn7/Namth22/Manbd,"FIS1,Redhat1"
+      CER & KT for PROD - OCP & ODF,5 days,Tue 10/29/24,Mon 11/4/24,40,Longnn7/Namth22/Manbd,"FIS1,Redhat1"
+   Implementation - OCP & ODF for DR,23 days,Thu 10/17/24,Mon 11/18/24,,,
+      OCP Installation & Configuration (DR - Secondary DC),10 days,Thu 10/17/24,Wed 10/30/24,38,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+      ODF Installation & Configuration (DR - Secondary DC),3 days,Thu 10/31/24,Mon 11/4/24,43,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+      UAT for PROD - OCP & ODF,5 days,Tue 11/5/24,Mon 11/11/24,44,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+      CER & KT for PROD - OCP & ODF,5 days,Tue 11/12/24,Mon 11/18/24,45,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+   Implementation - OCP & ODF for Management Cluster (Active),23 days,Tue 11/5/24,Thu 12/5/24,,,
+      OCP Installation & Configuration (Mgmt cluster - Active),10 days,Tue 11/5/24,Mon 11/18/24,37,Longnn7/Namth22/Manbd,"Redhat,FIS1"
+      ODF Installation & Configuration (Mgmt cluster - Active),3 days,Tue 11/19/24,Thu 11/21/24,48,Longnn7/Namth22/Manbd,"Redhat,FIS1"
+      UAT for Mgmt cluster - OCP & ODF - Active,5 days,Fri 11/22/24,Thu 11/28/24,49,Longnn7/Namth22/Manbd,"Redhat,FIS1"
+      CER & KT for Mgmt cluster - OCP & ODF - Active,5 days,Fri 11/29/24,Thu 12/5/24,50,Longnn7/Namth22/Manbd,"Redhat,FIS1"
+   Implementation - OCP & ODF for Management Cluster (Passive),23 days,Tue 11/19/24,Thu 12/19/24,,,
+      OCP Installation & Configuration (Mgmt cluster - Passive),10 days,Tue 11/19/24,Mon 12/2/24,42,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+      ODF Installation & Configuration (Mgmt cluster - Passive),3 days,Tue 12/3/24,Thu 12/5/24,53,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+      UAT for Mgmt cluster - OCP & ODF -Passive,5 days,Fri 12/6/24,Thu 12/12/24,54,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+      CER & KT for Mgmt cluster - OCP & ODF -Passive,5 days,Fri 12/13/24,Thu 12/19/24,55,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+"   Implementation RH ACM, RH ACS & Quay - Active Mgmt cluster",25 days,Fri 12/6/24,Fri 1/10/25,,,
+      RHACS installation and configuration- Active,5 days,Fri 12/6/24,Thu 12/12/24,47,Longnn7/Namth22/Manbd,"FIS1,Redhat1"
+      Quay installation and configuration - Active,5 days,Fri 12/13/24,Thu 12/19/24,58,Longnn7/Namth22/Manbd,"FIS1,Redhat1"
+      RHACM installation and configuration - Active,5 days,Fri 12/20/24,Thu 12/26/24,59,Longnn7/Namth22/Manbd,"FIS1,Redhat1"
+"      UAT for RHACM, RHACS, Quay - Active",5 days,Fri 12/27/24,Fri 1/3/25,60,Longnn7/Namth22/Manbd,"FIS1,Redhat1"
+      CER & KT for RHACM - Active,5 days,Mon 1/6/25,Fri 1/10/25,61,Longnn7/Namth22/Manbd,"FIS1,Redhat1"
+"   Implementation RH ACM, RH ACS & Quay - Passive Mgmt cluster",25 days,Fri 12/20/24,Fri 1/24/25,,,
+      RHACS installation and configuration- Passive,5 days,Fri 12/20/24,Thu 12/26/24,52,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+      Quay installation and configuration- Passive,5 days,Fri 12/27/24,Fri 1/3/25,64,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+      RHACM installation and configuration- Passive,5 days,Mon 1/6/25,Fri 1/10/25,65,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+"      UAT for RHACM, RHACS, Quay- Passive",5 days,Mon 1/13/25,Fri 1/17/25,66,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+      CER & KT for RHACM- Passive,5 days,Mon 1/20/25,Fri 1/24/25,67,Longnn7/Namth22/Manbd,"FIS2,Redhat2"
+   Disaster Recovery Regional failover,10 days,Tue 2/4/25,Mon 2/17/25,"52,63,57,47,42",Longnn7/Namth22/Manbd,"Redhat,FIS"
+Upgrade T24,32 days,Mon 2/26/24,Tue 4/9/24,,,
+   Convert Archived Data and Read Only Data,32 days,Mon 2/26/24,Tue 4/9/24,"10SS,6",,"Farhan Ahmed,Amina Ashfaq"
+   Pre - Technical upgrade from T24TM R19 TAFC to T24TM R23 TAFJ,1 day,Mon 2/26/24,Mon 2/26/24,71SS,,"Farhan Ahmed,Amina Ashfaq"
+   Drop Indexes,1 day,Tue 2/27/24,Tue 2/27/24,72,,"Farhan Ahmed,Amina Ashfaq"
+   Configure Browser,18 days,Wed 2/28/24,Fri 3/22/24,73,,"Farhan Ahmed,Amina Ashfaq"
+   Technical upgrade from T24TM R19 to T24TM R23,10 days,Mon 3/25/24,Fri 4/5/24,74,,"Farhan Ahmed,Amina Ashfaq"
+   Core Updates Installation,2 days,Mon 4/8/24,Tue 4/9/24,75,,"Farhan Ahmed,Amina Ashfaq"
+   Backup the environment (App and DB) - Pre Run Conversion Backup,1 day,Thu 3/7/24,Thu 3/7/24,72SS+8 days,Ductm6,"Farhan Ahmed,Amina Ashfaq"
+   Post upgrade activity Run conversion,5 days,Fri 3/8/24,Thu 3/14/24,77,,"Farhan Ahmed,Amina Ashfaq"
+   T24 Table Restructure Service,1 day,Fri 3/15/24,Fri 3/15/24,78,,"Farhan Ahmed,Amina Ashfaq"
+   Log and resolve issues in Run conversion,5 days,Mon 3/18/24,Fri 3/22/24,79,,"Farhan Ahmed,Amina Ashfaq"
+   Log and resolve issues in report comparison,1 day,Mon 3/18/24,Mon 3/18/24,80SS,,"Farhan Ahmed,Amina Ashfaq"
+   Authorization of records released in upgrade,2 days,Mon 3/18/24,Tue 3/19/24,80SS,,"Farhan Ahmed,Amina Ashfaq"
+   Build views for fields in TAFJ,1 day,Wed 3/20/24,Wed 3/20/24,82,,"Farhan Ahmed,Amina Ashfaq"
+   Log and resolve issues,1 day,Thu 3/21/24,Thu 3/21/24,83,,"Farhan Ahmed,Amina Ashfaq"
+   System Verification,2 days,Fri 3/22/24,Mon 3/25/24,84,,"Farhan Ahmed,Amina Ashfaq"
+   Upgrade COB Pre-Requisites,1 day,Tue 3/26/24,Tue 3/26/24,85,,"Farhan Ahmed,Amina Ashfaq"
+   Backup the environment (App and DB) - Pre-COB Backup ,2 days,Wed 3/27/24,Thu 3/28/24,86,,"Farhan Ahmed,Amina Ashfaq"
+Convert Live Data,25 days,Wed 4/10/24,Fri 5/17/24,,,
+   Restore Pre Conversion Backup (App and DB),2 days,Wed 4/10/24,Thu 4/11/24,71,,"Farhan Ahmed,Amina Ashfaq"
+   Conversion Re-Engineering,5 days,Fri 4/12/24,Fri 4/19/24,89,,"Farhan Ahmed,Amina Ashfaq"
+   Re-Run the Conversion,5 days,Mon 4/22/24,Fri 4/26/24,90,,"Farhan Ahmed,Amina Ashfaq"
+   Run first COB without local batch jobs,5 days,Mon 4/29/24,Tue 5/7/24,91,,"Farhan Ahmed,Amina Ashfaq"
+   Log and Resolve Issues in the COB,5 days,Wed 5/8/24,Tue 5/14/24,92,,"Farhan Ahmed,Amina Ashfaq"
+   Restore the Pre-COB backup (App and DB),1 day,Wed 5/15/24,Wed 5/15/24,93,,"Farhan Ahmed,Amina Ashfaq"
+   Re-run clean COB after resolving all Issues,2 days,Thu 5/16/24,Fri 5/17/24,94,,"Farhan Ahmed,Amina Ashfaq"
+   Document upgrade changes,2 days,Thu 5/16/24,Fri 5/17/24,95SS,,"Farhan Ahmed,Amina Ashfaq"
+"Local Routine Conversions, TAFJ Compatibility, Unit Testing",62 days,Mon 2/19/24,Fri 5/17/24,,,
+   Local code review - basic Review,6 days,Mon 2/19/24,Mon 2/26/24,,"Manbd, thangnd9, PhuongMai","Farhan Ahmed,Amina Ashfaq"
+      Import the source code into Gitlab (JBC)/Drop the source code on Jump,1 day,Mon 2/19/24,Mon 2/19/24,10SS,"Manbd, thangnd9, PhuongMai",
+      Basic review,2 days,Tue 2/20/24,Wed 2/21/24,99,,Amina
+      Sending the guildline to do code conversion,2 days,Tue 2/20/24,Wed 2/21/24,100SS,,Amina
+      Code conversion workshop,1 day,Thu 2/22/24,Thu 2/22/24,101,,Amina
+      VPB internal review,2 days,Fri 2/23/24,Mon 2/26/24,102,VPB,
+   Online local code conversion (8000 to 9000),20 days,Tue 3/5/24,Mon 4/1/24,,"Manbd, thangnd9, PhuongMai","Farhan Ahmed,Amina Ashfaq"
+      1st round of code conversion and review,10 days,Tue 3/5/24,Mon 3/18/24,71SS+6 days,"Manbd, thangnd9, PhuongMai",
+      2nd round of code conversion,10 days,Tue 3/19/24,Mon 4/1/24,105,"Manbd, thangnd9, PhuongMai",
+   Local code review Corrections,10 days,Tue 4/2/24,Mon 4/15/24,104,,"Farhan Ahmed,Amina Ashfaq"
+   Document local code changes,2 days,Tue 4/16/24,Wed 4/17/24,107,,"Farhan Ahmed,Amina Ashfaq"
+   Unit Testing,52 days,Mon 3/4/24,Fri 5/17/24,71SS+5 days,,"Farhan Ahmed,Amina Ashfaq"
+Interface Review (,48 days,Mon 3/4/24,Mon 5/13/24,,,
+   ATM (way4),3 days,Mon 3/4/24,Wed 3/6/24,71SS+5 days,,Systems APAC
+   IAM System,3 days,Thu 3/7/24,Mon 3/11/24,111,,Systems APAC
+   ADFS (SSO),3 days,Tue 3/12/24,Thu 3/14/24,112,,Systems APAC
+   Viettel Cym (SIEM System),3 days,Fri 3/15/24,Tue 3/19/24,113,,Systems APAC
+   MQ Based Interfaces (IIB interface),6 days,Wed 3/20/24,Wed 3/27/24,114,,Systems APAC
+   T24 Browser (T24 viewer),3 days,Thu 3/28/24,Mon 4/1/24,115,,Systems APAC
+   SMS & Email,3 days,Tue 4/2/24,Thu 4/4/24,116,,Systems APAC
+   Outgoing Web Services ,3 days,Fri 4/5/24,Tue 4/9/24,117,,Systems APAC
+   HashiCorp Vault,3 days,Wed 4/10/24,Fri 4/12/24,118,,Systems APAC
+   SFTP,6 days,Mon 4/15/24,Tue 4/23/24,119,,
+   ETL,3 days,Wed 4/24/24,Fri 4/26/24,120,,
+   Golden gate,3 days,Mon 4/29/24,Fri 5/3/24,121,,
+   CPI gateway,6 days,Mon 5/6/24,Mon 5/13/24,122,,
+Interfaces Compatibility with R23 TAFJ,32604 days,Mon 12/25/23,Tue 12/31/48,,,
+   ATM,10 days,Thu 3/7/24,Wed 3/20/24,111,,Systems APAC
+   IAM System,10 days,Tue 3/12/24,Mon 3/25/24,112,,Systems APAC
+   ADFS,1576 days,Fri 3/15/24,Tue 12/31/48,113,,Systems APAC
+   Viettel Cym (SIEM System),10 days,Wed 3/20/24,Tue 4/2/24,114,,Systems APAC
+   Elastic Search,1576 days,Mon 12/25/23,Wed 10/2/48,,,Systems APAC
+   Grafana,10 days,Mon 12/25/23,Fri 1/5/24,,,Systems APAC
+   Prometheous,10 days,Mon 12/25/23,Fri 1/5/24,,,Systems APAC
+   Kibana,1576 days,Mon 12/25/23,Thu 9/19/48,,,Systems APAC
+   MQ Based Interfaces,10 days,Thu 3/28/24,Wed 4/10/24,115,,Systems APAC
+   T24 Browser,10 days,Tue 4/2/24,Mon 4/15/24,116,,Systems APAC
+   SMS & Email,10 days,Fri 4/5/24,Fri 4/19/24,117,,Systems APAC
+   Outgoing Web Services ,10 days,Wed 4/10/24,Wed 4/24/24,118,,Systems APAC
+   HashiCorp Vault,10 days,Mon 4/15/24,Mon 4/29/24,119,,Systems APAC
+"   API Framework, WorkBench, Design Studio",1618 days,Mon 3/11/24,Mon 12/9/48,,,Systems APAC
+Mocks,32494 days,Mon 7/1/24,Wed 1/29/49,,,Systems APAC
+   Mock Upgrade 1,22 days,Tue 12/10/48,Wed 1/8/49,138,,Systems APAC
+   Upgrade Testing,22 days,Tue 12/17/48,Wed 1/15/49,140SS+5 days,,Systems APAC
+   Runbook preparation,10 days,Thu 1/16/49,Wed 1/29/49,141,,Systems APAC
+"   Training (Initiation, Business & Technical)",15 days,Tue 12/10/48,Mon 12/30/48,138,,Systems APAC
+   Mock Upgrade 2,25 days,Mon 7/1/24,Fri 8/2/24,,,Systems APAC
+SIT,118 days,Mon 7/1/24,Fri 12/13/24,,,
+   Preparation of Test Cases,25 days,Mon 7/1/24,Fri 8/2/24,"144SS,24",,VPB
+   Execution of Test Cases,25 days,Mon 10/7/24,Fri 11/8/24,"144,19SS+5 days",,VPB
+   Interface Testing,10 days,Mon 11/11/24,Fri 11/22/24,147,,VPB
+   Fix Reported Issues,35 days,Mon 10/7/24,Fri 11/22/24,147SS,,Systems APAC[200%]
+   Test report,5 days,Mon 11/25/24,Fri 11/29/24,149,,VPB
+   Reconciliation,5 days,Mon 11/25/24,Fri 11/29/24,149,,"VPB,Systems APAC"
+   Mock Upgrade 3,10 days,Mon 12/2/24,Fri 12/13/24,"151,37",,VPB
+TDH POC,32 days,Mon 9/2/24,Thu 10/17/24,,,
+   Installation of DES,13 days,Mon 9/2/24,Fri 9/20/24,,,
+      Internet access,3 days,Mon 9/2/24,Fri 9/6/24,,VP Bank,
+      Redhat Subscription,5 days,Mon 9/9/24,Fri 9/13/24,155,VP Bank,
+      Tick Data.Stream check yes in SPF S SYSTEM,1 day,Mon 9/16/24,Mon 9/16/24,156,,Systems APAC
+      Product deployment on T24 ( RR and ES),1 day,Tue 9/17/24,Tue 9/17/24,157,,Systems APAC
+      Build Placed (including Maven and Java Zip file placed on the Server),1 day,Wed 9/18/24,Wed 9/18/24,158,,Systems APAC
+"      Installation of Maven, Java and 3rd Party tools (packages already in the file)",0.5 days,Thu 9/19/24,Thu 9/19/24,159,,Systems APAC
+      Installation of DES,0.5 days,Thu 9/19/24,Thu 9/19/24,160,,Systems APAC
+      Database team of bank for validation of DES Installation.,1 day,Fri 9/20/24,Fri 9/20/24,161,,Systems APAC
+   Installation Of TDH,13 days,Mon 9/23/24,Wed 10/9/24,,,
+      Utilities update,1 day,Mon 9/23/24,Mon 9/23/24,162,,Systems APAC
+      Install docker,1 day,Tue 9/24/24,Tue 9/24/24,164,,Systems APAC
+      Install Kubernetes,1 day,Wed 9/25/24,Wed 9/25/24,165,,Systems APAC
+      Build Images of TDH,2 days,Thu 9/26/24,Fri 9/27/24,166,,Systems APAC
+"      Install Database and create Database named as htrunk,ods,sds ( which is a configurational database for TDH )",1 day,Mon 9/30/24,Mon 9/30/24,167,,Systems APAC
+      Configure & Install Helm,1 day,Tue 10/1/24,Tue 10/1/24,168,,Systems APAC
+      Tag Pods,0.5 days,Wed 10/2/24,Wed 10/2/24,169,,Systems APAC
+      Check status of the Pods,0.5 days,Wed 10/2/24,Wed 10/2/24,170,,Systems APAC
+      Configure TDH,2 days,Thu 10/3/24,Fri 10/4/24,171,,Systems APAC
+      Creating Datastores,1 day,Mon 10/7/24,Mon 10/7/24,172,,Systems APAC
+      Running all the Tables ILP and Data Validation,2 days,Tue 10/8/24,Wed 10/9/24,173,,Systems APAC
+   Installation of Analytics Application,6 days,Thu 10/10/24,Thu 10/17/24,,,
+      Certificate Required for Analytics application for https,1 day,Thu 10/10/24,Thu 10/10/24,174,,Systems APAC
+      Installation & Setup of IIS,0.5 days,Fri 10/11/24,Fri 10/11/24,176,,Systems APAC
+      Installation of Dotnet version 6 or above,0.5 days,Fri 10/11/24,Fri 10/11/24,177,,Systems APAC
+      SQL Server DB Installation,1 day,Mon 10/14/24,Mon 10/14/24,178,,Systems APAC
+      Analytics application build execution,1 day,Tue 10/15/24,Tue 10/15/24,179,,Systems APAC
+      Certificate Setup and installation,1 day,Wed 10/16/24,Wed 10/16/24,180,,Systems APAC
+      Validation of Application URL,1 day,Thu 10/17/24,Thu 10/17/24,181,,Systems APAC
+UAT,62 days,Tue 11/19/24,Fri 2/21/25,,,
+   Execution of Test Cases,25 days,Tue 11/19/24,Mon 12/23/24,"37,42",,VPB
+   Reconciliation,25 days,Tue 11/19/24,Mon 12/23/24,"37,42,184SS",,"Systems APAC,VPB"
+   Fix Reported Issues,25 days,Fri 11/22/24,Thu 12/26/24,184SS+3 days,,Systems APAC
+   Reconciliation,10 days,Fri 12/27/24,Fri 1/10/25,186,,"VPB,Systems APAC"
+   Test report,5 days,Fri 12/27/24,Fri 1/3/25,186,,VPB
+   Mock Upgrade 4,24 days,Mon 1/13/25,Fri 2/21/25,"37,42,47,52,57,187",,VPB
+Performance Test Planning,130 days,Tue 8/13/24,Fri 2/21/25,"144,189FF",,"Systems APAC,VPB"
+Security Testing,25 days,Mon 2/24/25,Fri 3/28/25,189,,VPB
+Security test report,5 days,Mon 3/31/25,Fri 4/4/25,191,,VPB
+Dress Rehearsal 1 & 2,25 days,Mon 2/24/25,Fri 3/28/25,189,,VPB
+Performance Test,30 days,Tue 2/18/25,Mon 3/31/25,"69,193FF",,System
+Performance test report,5 days,Tue 4/1/25,Mon 4/7/25,194,,System
+Go Live,5 days,Tue 4/1/25,Mon 4/7/25,"193,152,189,194,191",,"Systems APAC,VPB"
+"Documentation including RunBook, Project Plan, Deployment Plan, Architecture etc",250 days,Wed 5/15/24,Mon 5/12/25,,,Systems APAC
+Post Go Live,22 days,Tue 4/8/25,Wed 5/7/25,196,,"Systems APAC,VPB"

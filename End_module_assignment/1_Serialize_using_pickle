@@ -1,0 +1,7 @@
+import pickle
+
+Assignment_names = {'end_module_assignment': 'week8'}
+
+with open('Dongfile2.pkl', 'wb') as handle:
+    pickle.dump(Assignment_names, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    handle.close()

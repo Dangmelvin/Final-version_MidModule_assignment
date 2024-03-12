@@ -1,0 +1,6 @@
+import pickle
+
+with open('dongfile2.pkl', 'rb') as handle:
+
+    Assignment_names_loaded = pickle.load(handle) # deserialize using load()
+    print(Assignment_names_loaded)

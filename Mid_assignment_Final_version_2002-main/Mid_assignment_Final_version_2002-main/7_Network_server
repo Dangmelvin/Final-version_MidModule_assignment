@@ -1,0 +1,55 @@
+import socket
+import threading
+import pickle
+
+# Server configuration
+HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
+PORT = 12345        # Port to listen on
+
+# Function to handle client connections
+def handle_client(client_socket, address):
+    print(f"Accepted connection from {address}")
+    while True:
+        data = client_socket.recv(1024)
+        if not data:
+            print(f"Connection closed by {address}")
+            break
+        handle_data(data)
+    client_socket.close()
+
+# Function to handle received data
+def handle_data(data):
+    # Deserialize the data
+    try:
+        received_data = pickle.loads(data)
+        if isinstance(received_data, dict):
+            print("Received dictionary:", received_data)
+        elif isinstance(received_data, bytes):
+            # Assume it's a file
+            with open("received_file.txt", "wb") as f:
+                f.write(received_data)
+            print("Received file: received_file.txt")
+        else:
+            print("Received unknown data type")
+    except pickle.UnpicklingError as e:
+        print("Error occurred while deserializing data:", e)
+
+# Main function to start the server
+def main():
+    # Create a TCP/IP socket
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
+        # Bind the socket to the address and port
+        server_socket.bind((HOST, PORT))
+        # Enable listening
+        server_socket.listen(5)
+        print(f"Server listening on {HOST}:{PORT}")
+
+        while True:
+            # Wait for a connection
+            client_socket, address = server_socket.accept()
+            # Start a new thread to handle the connection
+            client_handler = threading.Thread(target=handle_client, args=(client_socket, address))
+            client_handler.start()
+
+if __name__ == "__main__":
+    main()
